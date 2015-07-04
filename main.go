@@ -15,7 +15,7 @@ func (mux Mux) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	domainParts := strings.Split(r.Host, ".")
 	fmt.Println(domainParts)
 
-	//mux.ServeHTTP(w, r)
+	mux.ServeHTTP(w, r)
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
