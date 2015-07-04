@@ -19,6 +19,7 @@ func (mux Mux) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(r.URL.Path)
 	fmt.Fprintf(w, "Hello, %q", r.URL.Path[1:])
 }
 
