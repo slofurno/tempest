@@ -27,9 +27,8 @@ func main() {
 
 	mux := http.NewServeMux()
 	//mux.HandleFunc("/", handler)
-
-	http.ListenAndServe(":80", mux)
 	mux.HandleFunc("/", handler)
+	http.ListenAndServe(":80", mux)
 
 	/*
 		http.Handle("/", http.FileServer(http.Dir("static")))
